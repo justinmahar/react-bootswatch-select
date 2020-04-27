@@ -1,0 +1,39 @@
+---
+name: FontAwesome
+menu: Components
+route: /FontAwesome
+---
+
+import { Playground, Props } from 'docz';
+import { FontAwesome } from './FontAwesome';
+
+<h1>FontAwesome</h1>
+
+## Description
+
+Use this component to quickly add [Font Awesome](https://fontawesome.com/) styles to the `<head/>` element of the page. 
+
+By default, styles are loaded from [bootstrapcdn.com](https://www.bootstrapcdn.com/) CDN.
+
+## Usage
+
+
+```jsx
+import { FontAwesome } from '@devboldly/react-bootswatch-select';
+...
+<FontAwesome version={'4.7.0'} />
+```
+
+## Props
+
+<Props of={FontAwesome} />
+
+> Note: Expand each prop for more information.
+
+<br/><br/>
+
+The following template is used for the Font Awesome CSS path: `${cdnLocation}/${version}/css/${filename}`
+
+## Demo
+
+<p>See the <a href="https://devboldly.github.io/react-bootswatch-select-demo/" target="_blank" rel="noopener noreferrer">Storybook demo</a> for a live example. The paintbrush icon and eye icon in the header are both Font Awesome icons.</p>

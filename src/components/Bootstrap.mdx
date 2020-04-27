@@ -1,0 +1,51 @@
+---
+name: Bootstrap
+menu: Components
+route: /Bootstrap
+---
+
+import { Playground, Props } from 'docz';
+import { Bootstrap } from './Bootstrap';
+
+<h1>Bootstrap</h1>
+
+## Description
+
+Use this component to easily add [Bootstrap](https://getbootstrap.com/) CSS styles to the `<head/>` element of the page.
+
+By default, styles are loaded from [bootstrapcdn.com](https://www.bootstrapcdn.com/) CDN.
+
+## Usage
+
+```jsx
+import { Bootstrap } from '@devboldly/react-bootswatch-select';
+...
+<Bootstrap version={'4.4.1'} />
+```
+
+See [bootstrapcdn.com](https://www.bootstrapcdn.com/) for the latest CDN version available.
+
+## Props
+
+<Props of={Bootstrap} />
+
+> Note: Expand each prop for more information.
+
+<br/><br/>
+
+The following template is used for the Bootstrap CSS path: `${cdnLocation}/${version}/css/${filename}`
+
+## Example
+
+To load Bootstrap before the [BootswatchSelect](/BootswatchSelect) is used:
+
+```jsx
+import { Bootstrap, BootswatchSelect } from '@devboldly/react-bootswatch-select';
+...
+<Bootstrap version={'4.4.1'} />
+<BootswatchSelect version={'4.4.1'} className="form-control" />
+```
+
+## Demo
+
+<p>See the <a href="https://devboldly.github.io/react-bootswatch-select-demo/" target="_blank" rel="noopener noreferrer">Storybook demo</a> for a live example that uses this component.</p>
