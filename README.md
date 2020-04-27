@@ -5,8 +5,8 @@
   Bootswatch theme selector component for React.<br/>Try Bootswatch themes on your Bootstrap site with one line!
 </h3>
 <p align="center">
-  <a href="https://badge.fury.io/js/%40devboldly%2Freact-bootswatch-select">
-    <img src="https://badge.fury.io/js/%40devboldly%2Freact-bootswatch-select.svg" alt="npm Version"/>
+  <a href="https://badge.fury.io/js/react-bootswatch-select">
+    <img src="https://badge.fury.io/js/react-bootswatch-select.svg" alt="npm Version"/>
   </a>
   <a href="https://github.com/devboldly/react-bootswatch-select/actions?query=workflow%3ATests">
     <img src="https://github.com/devboldly/react-bootswatch-select/workflows/Tests/badge.svg" alt="Tests Status"/>
@@ -48,7 +48,7 @@ By default, all CSS is loaded from [bootstrapcdn.com](https://www.bootstrapcdn.c
 ## Installation
 
 ```
-npm i @devboldly/react-bootswatch-select
+npm i react-bootswatch-select
 ```
 
 ## Quick Start
@@ -58,7 +58,7 @@ If Bootstrap is loaded already:
 #### Selector Visible
 
 ```jsx
-import { BootswatchSelect } from '@devboldly/react-bootswatch-select';
+import { BootswatchSelect } from 'react-bootswatch-select';
 ...
 <BootswatchSelect version={'4.4.1'} className="form-control" />
 ```
@@ -68,7 +68,7 @@ This `select` will dynamically add the theme CSS link in the `head` when a Boots
 #### Selector Hidden
 
 ```jsx
-import { BootswatchSelect } from '@devboldly/react-bootswatch-select';
+import { BootswatchSelect } from 'react-bootswatch-select';
 ...
 <BootswatchSelect version={'4.4.1'} selectedThemeName="cerulean" selectorHidden />
 ```
@@ -78,7 +78,7 @@ This will add the Bootswatch CSS theme selected in the `head` and not render the
 #### Display-Only (No Head Link)
 
 ```jsx
-import { BootswatchSelect } from '@devboldly/react-bootswatch-select';
+import { BootswatchSelect } from 'react-bootswatch-select';
 ...
 <BootswatchSelect className="form-control" disableHeadLink />
 ```
@@ -90,7 +90,7 @@ This will render the `select` only and will not dynamically add the selected the
 If you'd like to load Bootstrap (or Font Awesome) from the CDN before the [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect) is used:
 
 ```jsx
-import { Bootstrap, FontAwesome, BootswatchSelect } from '@devboldly/react-bootswatch-select';
+import { Bootstrap, FontAwesome, BootswatchSelect } from 'react-bootswatch-select';
 ...
 <Bootstrap version={'4.4.1'} />
 <FontAwesome version={'4.7.0'} />

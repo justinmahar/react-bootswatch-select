@@ -1,5 +1,5 @@
 {
-  "name": "@devboldly/react-bootswatch-select",
+  "name": "react-bootswatch-select",
   "version": "1.0.2",
   "author": "Dev Boldly <devboldly@gmail.com>",
   "description": "Bootswatch theme selector component for React. Try Bootswatch themes on your Bootstrap site with one line!",
