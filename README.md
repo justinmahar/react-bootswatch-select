@@ -22,7 +22,7 @@ Read the **[official documentation](https://devboldly.github.io/react-bootswatch
 
 <a href="https://devboldly.github.io/react-bootswatch-select-demo/" target="_blank" rel="noopener noreferrer"><img src="./src/__docz__/images/demo.gif" /></a>
 
-👁️ **[Live Demo](https://devboldly.github.io/react-bootswatch-select/ExampleComponent#example)**
+👁️ **[Live Demo](https://devboldly.github.io/react-bootswatch-select-demo/)**
 
 ## Overview
 
