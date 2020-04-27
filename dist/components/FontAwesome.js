@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var react_helmet_1 = require("react-helmet");
 /**
- * Quickly add Font Awesome styles to the `<head/>` element of the page.
+ * Quickly add Font Awesome styles to the `head` element of the page.
  *
  * The Font Awesome version defaults to `4.7.0`,
  * CDN defaults to [bootstrapcdn.com](https://www.bootstrapcdn.com/), and filename defaults to

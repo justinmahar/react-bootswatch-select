@@ -23,10 +23,11 @@ var react_helmet_1 = require("react-helmet");
 /**
  * See the documentation: https://devboldly.github.io/react-bootswatch-select/BootswatchSelect
  *
- * A Bootswatch theme selector. Supports two modes:
+ * A Bootswatch theme selector. Supports three modes:
  *
- * - **Selector visible:** A `<select/>` element is returned that allows the user to choose a theme to preview. Dynamically swaps CSS out of head based on selection. Place this anywhere on the page. Default behavior.
- * - **Selector hidden:** Provide a `selectedThemeName` prop along with `selectorHidden` and the provided theme will be used on the page. Adds CSS to head only. It doesn't matter where on the page this component is placed since no `<select/>` is rendered.
+ * - **Selector visible:** A `select` element is rendered that allows the user to choose a theme to use. Dynamically swaps CSS out of head based on selection.
+ * - **Selector hidden:** Provide a `selectedThemeName` prop along with `selectorHidden` and the provided theme will be used on the page. Adds CSS to head only. It doesn't matter where on the page this component is placed since no `select` is rendered.
+ * - **Display-only:** Provide the `disableHeadLink` prop to disable the CSS `link` in `head`. Turns this into a plain old `select`. Use `onChange` to listen for selection.
  *
  * The Bootswatch version defaults to `4.4.1`,
  * CDN defaults to [bootstrapcdn.com](https://www.bootstrapcdn.com/), and filename defaults to
@@ -36,7 +37,7 @@ var react_helmet_1 = require("react-helmet");
  *
  * @param props Provide the `version` of Bootswatch, and optionally provide the `cdnLocation` and `themeFilename`. Can also specify the initially selected `selectedThemeName`, and can specify `selectorHidden` to hide the select element.
  *
- * **In addition, all props for the `<select/>` element are supported**, such as `onChange`.
+ * **In addition, all props for the `select` element are supported**, such as `onChange`.
  *
  * The template for the Bootswatch CSS file is: `${cdnLocation}/${version}/${selectedThemeName}/${themeFilename}`
  *
@@ -77,13 +78,17 @@ function BootswatchSelect(props) {
             }
         } });
     // Remove our own props
-    delete selectProps.version;
-    delete selectProps.cdnLocation;
-    delete selectProps.themeFilename;
-    delete selectProps.selectedThemeName;
-    delete selectProps.selectorHidden;
+    var propKeys = [
+        'version',
+        'cdnLocation',
+        'themeFilename',
+        'selectedThemeName',
+        'selectorHidden',
+        'disableHeadLink',
+    ];
+    propKeys.forEach(function (propKey) { return delete selectProps[propKey]; });
     return (React.createElement(React.Fragment, null,
-        React.createElement(react_helmet_1.Helmet, null, selectedThemeName !== 'default' && React.createElement("link", { rel: "stylesheet", type: "text/css", href: themeCss })),
+        !props.disableHeadLink && (React.createElement(react_helmet_1.Helmet, null, selectedThemeName !== 'default' && React.createElement("link", { rel: "stylesheet", type: "text/css", href: themeCss }))),
         !props.selectorHidden && (React.createElement("select", __assign({}, selectProps),
             React.createElement("option", { value: "default" }, "Default (No Theme)"),
             React.createElement("option", { disabled: true }, "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"),
