@@ -1,7 +1,7 @@
 {
   "name": "react-bootswatch-select",
   "version": "1.0.3",
-  "author": "Dev Boldly <devboldly@gmail.com>",
+  "author": "DevBoldly <devboldly@gmail.com>",
   "description": "Bootswatch theme selector component for React. Try Bootswatch themes on your Bootstrap site with one line!",
   "homepage": "https://github.com/devboldly/react-bootswatch-select#readme",
   "main": "./dist/index.js",
@@ -70,6 +70,7 @@
     "prettier": "^1.19.1",
     "react-ga": "^2.7.0",
     "react-test-renderer": "^16.13.0",
+    "react-use-window-scroll": "^1.0.8",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3"

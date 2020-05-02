@@ -2,9 +2,6 @@ import { render, RenderResult } from '@testing-library/react';
 import React from 'react';
 import { BootswatchSelect, BootswatchSelectProps } from '../components/BootswatchSelect';
 
-// Learn how to test React components:
-// https://testing-library.com/docs/react-testing-library/intro
-
 function renderComponent(props: BootswatchSelectProps, children: React.ReactNode = undefined): RenderResult {
   return render(<BootswatchSelect {...props}>{children}</BootswatchSelect>);
 }
