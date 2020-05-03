@@ -11,6 +11,8 @@ export interface BootstrapProps {
 }
 
 /**
+ * See documentation: [Bootstrap](https://devboldly.github.io/react-bootswatch-select/Bootstrap)
+ * 
  * Quickly add Bootstrap stylesheets to the `<head/>` element of the page.
  *
  * The Bootstrap version defaults to `4.4.1`,
