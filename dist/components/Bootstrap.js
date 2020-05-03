@@ -10,6 +10,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var react_helmet_1 = require("react-helmet");
 /**
+ * See documentation: [Bootstrap](https://devboldly.github.io/react-bootswatch-select/Bootstrap)
+ *
  * Quickly add Bootstrap stylesheets to the `<head/>` element of the page.
  *
  * The Bootstrap version defaults to `4.4.1`,

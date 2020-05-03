@@ -10,6 +10,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var react_helmet_1 = require("react-helmet");
 /**
+ * See the documentation: [FontAwesome](https://devboldly.github.io/react-bootswatch-select/FontAwesome)
+ *
  * Quickly add Font Awesome styles to the `head` element of the page.
  *
  * The Font Awesome version defaults to `4.7.0`,

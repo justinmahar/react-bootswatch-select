@@ -8,6 +8,8 @@ export interface FontAwesomeProps {
     filename?: string;
 }
 /**
+ * See the documentation: [FontAwesome](https://devboldly.github.io/react-bootswatch-select/FontAwesome)
+ *
  * Quickly add Font Awesome styles to the `head` element of the page.
  *
  * The Font Awesome version defaults to `4.7.0`,

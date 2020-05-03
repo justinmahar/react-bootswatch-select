@@ -21,7 +21,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var react_helmet_1 = require("react-helmet");
 /**
- * See the documentation: https://devboldly.github.io/react-bootswatch-select/BootswatchSelect
+ * See the documentation: [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect)
  *
  * A Bootswatch theme selector. Supports three modes:
  *
