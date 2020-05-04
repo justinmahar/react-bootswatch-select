@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "author": "DevBoldly <devboldly@gmail.com>",
   "description": "Bootswatch theme selector component for React. Try Bootswatch themes on your Bootstrap site with one line!",
-  "homepage": "https://github.com/devboldly/react-bootswatch-select#readme",
+  "homepage": "https://devboldly.github.io/react-bootswatch-select/",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
