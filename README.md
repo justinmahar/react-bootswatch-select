@@ -14,6 +14,9 @@
   <a href="https://github.com/justinmahar/react-bootswatch-select/actions?query=workflow%3ADeploy">
     <img src="https://github.com/justinmahar/react-bootswatch-select/workflows/Deploy/badge.svg" alt="Deploy Status"/>
   </a>
+  <a href="https://github1s.com/justinmahar/react-bootswatch-select">
+    <img src="https://img.shields.io/badge/View%20in%20VSCode-readonly-blue" alt="View in VSCode"/>
+  </a>
 </p>
 
 ## Documentation
