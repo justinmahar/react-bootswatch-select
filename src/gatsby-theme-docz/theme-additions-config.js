@@ -37,7 +37,7 @@ export const themeAdditionsConfig = {
     /** Shoutout to what's powering this project. */
     poweredByName: `React${" "}Kindling`,
     /** Link for shoutout. */
-    poweredByUrl: `https://github.com/dev${""}boldly/react${"-"}kindling`,
+    poweredByUrl: `https://github.com/justin${""}mahar/react${"-"}kindling`,
     /** Hide the "powered by" text from footer. */
     hidePoweredBy: false,
   },
