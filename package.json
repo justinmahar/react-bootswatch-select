@@ -1,6 +1,6 @@
 {
   "name": "react-bootswatch-select",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Justin Mahar <contact@justinmahar.com>",
   "description": "Bootswatch theme selector component for React. Try Bootswatch themes on your Bootstrap site with one line!",
   "homepage": "https://justinmahar.github.io/react-bootswatch-select/",
