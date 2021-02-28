@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
 export interface FontAwesomeProps {
   /** The version of Font Awesome. The `version` is required for the sake of being explicit, but it defaults to `4.7.0` if unspecified. */
@@ -25,9 +25,7 @@ export interface FontAwesomeProps {
  */
 export function FontAwesome(props: FontAwesomeProps): JSX.Element {
   // Remove trailing slash
-  const cdnLocation = props.cdnLocation
-    ? props.cdnLocation.replace(/(.*)[/]+$/, "$1")
-    : "";
+  const cdnLocation = props.cdnLocation ? props.cdnLocation.replace(/(.*)[/]+$/, '$1') : '';
 
   // Construct CSS path
   const fontAwesomeCss = `${cdnLocation}/${props.version}/css/${props.filename}`;
@@ -40,7 +38,7 @@ export function FontAwesome(props: FontAwesomeProps): JSX.Element {
 }
 
 FontAwesome.defaultProps = {
-  version: "4.7.0",
-  cdnLocation: "https://stackpath.bootstrapcdn.com/font-awesome/",
-  filename: "font-awesome.min.css",
+  version: '4.7.0',
+  cdnLocation: 'https://stackpath.bootstrapcdn.com/font-awesome/',
+  filename: 'font-awesome.min.css',
 };
