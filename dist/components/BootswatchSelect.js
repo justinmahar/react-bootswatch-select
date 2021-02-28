@@ -1,31 +1,36 @@
 "use strict";
-var __assign =
-  (this && this.__assign) ||
-  function() {
-    __assign =
-      Object.assign ||
-      function(t) {
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
         }
         return t;
-      };
+    };
     return __assign.apply(this, arguments);
-  };
-var __importStar =
-  (this && this.__importStar) ||
-  function(mod) {
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null)
-      for (var k in mod)
-        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
     return result;
-  };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BootswatchSelect = void 0;
 var React = __importStar(require("react"));
 var react_helmet_1 = require("react-helmet");
 /**
@@ -74,183 +79,59 @@ var react_helmet_1 = require("react-helmet");
  * - `yeti`
  */
 function BootswatchSelect(props) {
-  var _a = React.useState(props.selectedThemeName),
-    selectedThemeName = _a[0],
-    setSelectedThemeName = _a[1];
-  // Remove trailing slash
-  var cdnLocation = props.cdnLocation
-    ? props.cdnLocation.replace(/(.*)[/]+$/, "$1")
-    : "";
-  // Construct CSS path
-  var themeCss =
-    cdnLocation +
-    "/" +
-    props.version +
-    "/" +
-    selectedThemeName +
-    "/" +
-    props.themeFilename;
-  var selectProps = __assign(__assign({}, props), {
-    onChange: function(e) {
-      setSelectedThemeName(e.target.value);
-      if (props.onChange) {
-        props.onChange(e);
-      }
-    },
-  });
-  // Remove our own props
-  var propKeys = [
-    "version",
-    "cdnLocation",
-    "themeFilename",
-    "selectedThemeName",
-    "selectorHidden",
-    "disableHeadLink",
-  ];
-  propKeys.forEach(function(propKey) {
-    return delete selectProps[propKey];
-  });
-  return React.createElement(
-    React.Fragment,
-    null,
-    !props.disableHeadLink &&
-      React.createElement(
-        react_helmet_1.Helmet,
-        null,
-        selectedThemeName !== "default" &&
-          React.createElement("link", {
-            rel: "stylesheet",
-            type: "text/css",
-            href: themeCss,
-          })
-      ),
-    !props.selectorHidden &&
-      React.createElement(
-        "select",
-        __assign({}, selectProps),
-        React.createElement(
-          "option",
-          { value: "default" },
-          "Default (No Theme)"
-        ),
-        React.createElement(
-          "option",
-          { disabled: true },
-          "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
-        ),
-        React.createElement(
-          "option",
-          { value: "cerulean" },
-          "Cerulean - A calm blue sky"
-        ),
-        React.createElement(
-          "option",
-          { value: "cosmo" },
-          "Cosmo - An ode to Metro"
-        ),
-        React.createElement(
-          "option",
-          { value: "cyborg" },
-          "Cyborg - Jet black and electric blue"
-        ),
-        React.createElement(
-          "option",
-          { value: "darkly" },
-          "Darkly - Flatly in night mode"
-        ),
-        React.createElement(
-          "option",
-          { value: "flatly" },
-          "Flatly - Flat and modern"
-        ),
-        React.createElement(
-          "option",
-          { value: "journal" },
-          "Journal - Crisp like a new sheet of paper"
-        ),
-        React.createElement(
-          "option",
-          { value: "litera" },
-          "Litera - The medium is the message"
-        ),
-        React.createElement(
-          "option",
-          { value: "lumen" },
-          "Lumen - Light and shadow"
-        ),
-        React.createElement(
-          "option",
-          { value: "lux" },
-          "Lux - A touch of class"
-        ),
-        React.createElement(
-          "option",
-          { value: "materia" },
-          "Materia - Material is the metaphor"
-        ),
-        React.createElement(
-          "option",
-          { value: "minty" },
-          "Minty - A fresh feel"
-        ),
-        React.createElement(
-          "option",
-          { value: "pulse" },
-          "Pulse - A trace of purple"
-        ),
-        React.createElement(
-          "option",
-          { value: "sandstone" },
-          "Sandstone - A touch of warmth"
-        ),
-        React.createElement(
-          "option",
-          { value: "simplex" },
-          "Simplex - Mini and minimalist"
-        ),
-        React.createElement(
-          "option",
-          { value: "sketchy" },
-          "Sketchy - A hand-drawn look for mockups and mirth"
-        ),
-        React.createElement(
-          "option",
-          { value: "slate" },
-          "Slate - Shades of gunmetal gray"
-        ),
-        React.createElement(
-          "option",
-          { value: "solar" },
-          "Solar - A spin on Solarized"
-        ),
-        React.createElement(
-          "option",
-          { value: "spacelab" },
-          "Spacelab - Silvery and sleek"
-        ),
-        React.createElement(
-          "option",
-          { value: "superhero" },
-          "Superhero - The brave and the blue"
-        ),
-        React.createElement(
-          "option",
-          { value: "united" },
-          "United - Ubuntu orange and unique font"
-        ),
-        React.createElement(
-          "option",
-          { value: "yeti" },
-          "Yeti - A friendly foundation"
-        )
-      )
-  );
+    var _a = React.useState(props.selectedThemeName), selectedThemeName = _a[0], setSelectedThemeName = _a[1];
+    // Remove trailing slash
+    var cdnLocation = props.cdnLocation ? props.cdnLocation.replace(/(.*)[/]+$/, '$1') : '';
+    // Construct CSS path
+    var themeCss = cdnLocation + "/" + props.version + "/" + selectedThemeName + "/" + props.themeFilename;
+    var selectProps = __assign(__assign({}, props), { onChange: function (e) {
+            setSelectedThemeName(e.target.value);
+            if (props.onChange) {
+                props.onChange(e);
+            }
+        } });
+    // Remove our own props
+    var propKeys = [
+        'version',
+        'cdnLocation',
+        'themeFilename',
+        'selectedThemeName',
+        'selectorHidden',
+        'disableHeadLink',
+    ];
+    propKeys.forEach(function (propKey) { return delete selectProps[propKey]; });
+    return (React.createElement(React.Fragment, null,
+        !props.disableHeadLink && (React.createElement(react_helmet_1.Helmet, null, selectedThemeName !== 'default' && React.createElement("link", { rel: "stylesheet", type: "text/css", href: themeCss }))),
+        !props.selectorHidden && (React.createElement("select", __assign({}, selectProps),
+            React.createElement("option", { value: "default" }, "Default (No Theme)"),
+            React.createElement("option", { disabled: true }, "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"),
+            React.createElement("option", { value: "cerulean" }, "Cerulean - A calm blue sky"),
+            React.createElement("option", { value: "cosmo" }, "Cosmo - An ode to Metro"),
+            React.createElement("option", { value: "cyborg" }, "Cyborg - Jet black and electric blue"),
+            React.createElement("option", { value: "darkly" }, "Darkly - Flatly in night mode"),
+            React.createElement("option", { value: "flatly" }, "Flatly - Flat and modern"),
+            React.createElement("option", { value: "journal" }, "Journal - Crisp like a new sheet of paper"),
+            React.createElement("option", { value: "litera" }, "Litera - The medium is the message"),
+            React.createElement("option", { value: "lumen" }, "Lumen - Light and shadow"),
+            React.createElement("option", { value: "lux" }, "Lux - A touch of class"),
+            React.createElement("option", { value: "materia" }, "Materia - Material is the metaphor"),
+            React.createElement("option", { value: "minty" }, "Minty - A fresh feel"),
+            React.createElement("option", { value: "pulse" }, "Pulse - A trace of purple"),
+            React.createElement("option", { value: "sandstone" }, "Sandstone - A touch of warmth"),
+            React.createElement("option", { value: "simplex" }, "Simplex - Mini and minimalist"),
+            React.createElement("option", { value: "sketchy" }, "Sketchy - A hand-drawn look for mockups and mirth"),
+            React.createElement("option", { value: "slate" }, "Slate - Shades of gunmetal gray"),
+            React.createElement("option", { value: "solar" }, "Solar - A spin on Solarized"),
+            React.createElement("option", { value: "spacelab" }, "Spacelab - Silvery and sleek"),
+            React.createElement("option", { value: "superhero" }, "Superhero - The brave and the blue"),
+            React.createElement("option", { value: "united" }, "United - Ubuntu orange and unique font"),
+            React.createElement("option", { value: "yeti" }, "Yeti - A friendly foundation")))));
 }
 exports.BootswatchSelect = BootswatchSelect;
 BootswatchSelect.defaultProps = {
-  version: "4.4.1",
-  cdnLocation: "https://stackpath.bootstrapcdn.com/bootswatch/",
-  themeFilename: "bootstrap.min.css",
-  selectedThemeName: "default",
-  selectorHidden: false,
+    version: '4.4.1',
+    cdnLocation: 'https://stackpath.bootstrapcdn.com/bootswatch/',
+    themeFilename: 'bootstrap.min.css',
+    selectedThemeName: 'default',
+    selectorHidden: false,
 };
