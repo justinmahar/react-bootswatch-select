@@ -1,9 +1,9 @@
 {
   "name": "react-bootswatch-select",
   "version": "1.0.7",
-  "author": "DevBoldly <devboldly@gmail.com>",
+  "author": "Justin Mahar <contact@justinmahar.com>",
   "description": "Bootswatch theme selector component for React. Try Bootswatch themes on your Bootstrap site with one line!",
-  "homepage": "https://devboldly.github.io/react-bootswatch-select/",
+  "homepage": "https://justinmahar.github.io/react-bootswatch-select/",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -28,10 +28,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devboldly/react-bootswatch-select.git"
+    "url": "git+https://github.com/justinmahar/react-bootswatch-select.git"
   },
   "bugs": {
-    "url": "https://github.com/devboldly/react-bootswatch-select/issues"
+    "url": "https://github.com/justinmahar/react-bootswatch-select/issues"
   },
   "keywords": [],
   "dependencies": {

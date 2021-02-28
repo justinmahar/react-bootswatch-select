@@ -4,19 +4,18 @@ menu: Components
 route: /BootswatchSelect
 ---
 
-import { Playground, Props } from 'docz';
-import bootswatchSelectPng from '../__docz__/images/bootswatch-select.png';
-import demoGif from '../__docz__/images/demo.gif';
-import { Bootstrap } from './Bootstrap';
-import { BootswatchSelect } from './BootswatchSelect';
+import { Playground, Props } from "docz";
+import bootswatchSelectPng from "../__docz__/images/bootswatch-select.png";
+import demoGif from "../__docz__/images/demo.gif";
+import { Bootstrap } from "./Bootstrap";
+import { BootswatchSelect } from "./BootswatchSelect";
 
 <h1>BootswatchSelect</h1>
-
-<img src={demoGif} style={{ border: 'solid 1px #eeeeee' }} />
+<img src={demoGif} style={{ border: "solid 1px #eeeeee" }} />
 
 ## Description
 
-A drop-in [Bootswatch](https://bootswatch.com/) theme selector. 
+A drop-in [Bootswatch](https://bootswatch.com/) theme selector.
 
 Supports three modes:
 
@@ -38,7 +37,7 @@ import { BootswatchSelect } from 'react-bootswatch-select';
 <BootswatchSelect version={'4.4.1'} className="form-control" />
 ```
 
-This renders a [`select`](https://reactjs.org/docs/forms.html#the-select-tag) containing theme name options for the Bootswatch version specified. 
+This renders a [`select`](https://reactjs.org/docs/forms.html#the-select-tag) containing theme name options for the Bootswatch version specified.
 
 Here it is shown expanded below:
 
@@ -52,7 +51,7 @@ import { BootswatchSelect } from 'react-bootswatch-select';
 <BootswatchSelect version={'4.4.1'} selectedThemeName="cerulean" selectorHidden />
 ```
 
-The above code will use the `cerulean` theme (see [Theme Names](#theme-names) below for all options). 
+The above code will use the `cerulean` theme (see [Theme Names](#theme-names) below for all options).
 
 No visible element will be rendered when `selectorHidden` is used. As such, this can be placed anywhere.
 
@@ -68,14 +67,14 @@ This will render the `select` only and will not dynamically add the selected the
 
 ## Props
 
-| Prop | Type | Description |
-|------|------|-------------|
-| version | `string` | The version of Bootswatch to use. Required, but will fall back to `4.4.1` if not specified. See [bootstrapcdn](https://www.bootstrapcdn.com/bootswatch/) for the latest CDN version. |
-| selectedThemeName | `string` &#124; `undefined` | Selected theme name. Defaults to `default` |
-| selectorHidden | `string` &#124; `undefined` | Whether or not the selector is hidden. Specify `true` to hide. Defaults to `false`|
-| cdnLocation | `string` &#124; `undefined` | Location of the CDN. Defaults to `https://stackpath.bootstrapcdn.com/bootswatch/` |
-| themeFilename | `string` &#124; `undefined` | CSS theme filename. Defaults to `bootstrap.min.css` |
-| disableHeadLink | `boolean` &#124; `undefined` | Set to `true` to handle importing the styles yourself (no link will be added to `head`). Turns this component into a plain old `select`. Default `false`. |
+| Prop              | Type                         | Description                                                                                                                                                                          |
+| ----------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| version           | `string`                     | The version of Bootswatch to use. Required, but will fall back to `4.4.1` if not specified. See [bootstrapcdn](https://www.bootstrapcdn.com/bootswatch/) for the latest CDN version. |
+| selectedThemeName | `string` &#124; `undefined`  | Selected theme name. Defaults to `default`                                                                                                                                           |
+| selectorHidden    | `string` &#124; `undefined`  | Whether or not the selector is hidden. Specify `true` to hide. Defaults to `false`                                                                                                   |
+| cdnLocation       | `string` &#124; `undefined`  | Location of the CDN. Defaults to `https://stackpath.bootstrapcdn.com/bootswatch/`                                                                                                    |
+| themeFilename     | `string` &#124; `undefined`  | CSS theme filename. Defaults to `bootstrap.min.css`                                                                                                                                  |
+| disableHeadLink   | `boolean` &#124; `undefined` | Set to `true` to handle importing the styles yourself (no link will be added to `head`). Turns this component into a plain old `select`. Default `false`.                            |
 
 In addition, **all React HTML props for the [`select`](https://reactjs.org/docs/forms.html#the-select-tag) tag are supported** (such as `onChange`, `className`, etc).
 
@@ -108,16 +107,26 @@ The theme name options are as follows:
 
 You can specify an initial theme using the `selectedThemeName` prop, and can handle selection changes using select's `onChange` event.
 
-A `BootswatchSelect` renders as a [`select`](https://reactjs.org/docs/forms.html#the-select-tag) element when visible. 
+A `BootswatchSelect` renders as a [`select`](https://reactjs.org/docs/forms.html#the-select-tag) element when visible.
 
 ## Examples
 
-<p>See the <a href="https://devboldly.github.io/react-bootswatch-select-demo/" target="_blank" rel="noopener noreferrer">Storybook demo</a> for a live example.</p>
+<p>
+  See the{" "}
+  <a
+    href="https://justinmahar.github.io/react-bootswatch-select-demo/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Storybook demo
+  </a>{" "}
+  for a live example.
+</p>
 
 ### Selector Visible
 
 ```jsx
-<BootswatchSelect version={'4.4.1'} className="form-control" />
+<BootswatchSelect version={"4.4.1"} className="form-control" />
 ```
 
 This `select` will dynamically add the theme CSS link in the `head` when a Bootswatch style is selected.
@@ -125,7 +134,11 @@ This `select` will dynamically add the theme CSS link in the `head` when a Boots
 ### Selector Hidden
 
 ```jsx
-<BootswatchSelect version={'4.4.1'} selectedThemeName="cerulean" selectorHidden />
+<BootswatchSelect
+  version={"4.4.1"}
+  selectedThemeName="cerulean"
+  selectorHidden
+/>
 ```
 
 This will add the Bootswatch CSS theme selected in the `head` and not render the `select` on the page.

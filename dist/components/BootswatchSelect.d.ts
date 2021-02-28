@@ -15,7 +15,7 @@ export interface BootswatchSelectProps {
 }
 export declare type ThemeName = 'default' | 'cerulean' | 'cosmo' | 'cyborg' | 'darkly' | 'flatly' | 'journal' | 'litera' | 'lumen' | 'lux' | 'materia' | 'minty' | 'pulse' | 'sandstone' | 'simplex' | 'sketchy' | 'slate' | 'solar' | 'spacelab' | 'superhero' | 'united' | 'yeti';
 /**
- * See the documentation: [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect)
+ * See the documentation: [BootswatchSelect](https://justinmahar.github.io/react-bootswatch-select/BootswatchSelect)
  *
  * A Bootswatch theme selector. Supports three modes:
  *

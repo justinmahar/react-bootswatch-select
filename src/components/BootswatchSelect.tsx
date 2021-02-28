@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import * as React from "react";
+import { Helmet } from "react-helmet";
 
 export interface BootswatchSelectProps {
   /** The version of Bootswatch to use. Required, but will fall back to `4.4.1` if not specified. See [bootstrapcdn](https://www.bootstrapcdn.com/bootswatch/) for the latest CDN version. */
@@ -17,31 +17,31 @@ export interface BootswatchSelectProps {
 }
 
 export type ThemeName =
-  | 'default'
-  | 'cerulean'
-  | 'cosmo'
-  | 'cyborg'
-  | 'darkly'
-  | 'flatly'
-  | 'journal'
-  | 'litera'
-  | 'lumen'
-  | 'lux'
-  | 'materia'
-  | 'minty'
-  | 'pulse'
-  | 'sandstone'
-  | 'simplex'
-  | 'sketchy'
-  | 'slate'
-  | 'solar'
-  | 'spacelab'
-  | 'superhero'
-  | 'united'
-  | 'yeti';
+  | "default"
+  | "cerulean"
+  | "cosmo"
+  | "cyborg"
+  | "darkly"
+  | "flatly"
+  | "journal"
+  | "litera"
+  | "lumen"
+  | "lux"
+  | "materia"
+  | "minty"
+  | "pulse"
+  | "sandstone"
+  | "simplex"
+  | "sketchy"
+  | "slate"
+  | "solar"
+  | "spacelab"
+  | "superhero"
+  | "united"
+  | "yeti";
 
 /**
- * See the documentation: [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect)
+ * See the documentation: [BootswatchSelect](https://justinmahar.github.io/react-bootswatch-select/BootswatchSelect)
  *
  * A Bootswatch theme selector. Supports three modes:
  *
@@ -88,10 +88,14 @@ export type ThemeName =
 export function BootswatchSelect(
   props: BootswatchSelectProps & React.SelectHTMLAttributes<HTMLSelectElement>
 ): JSX.Element {
-  const [selectedThemeName, setSelectedThemeName] = React.useState(props.selectedThemeName);
+  const [selectedThemeName, setSelectedThemeName] = React.useState(
+    props.selectedThemeName
+  );
 
   // Remove trailing slash
-  const cdnLocation = props.cdnLocation ? props.cdnLocation.replace(/(.*)[/]+$/, '$1') : '';
+  const cdnLocation = props.cdnLocation
+    ? props.cdnLocation.replace(/(.*)[/]+$/, "$1")
+    : "";
 
   // Construct CSS path
   const themeCss = `${cdnLocation}/${props.version}/${selectedThemeName}/${props.themeFilename}`;
@@ -107,19 +111,23 @@ export function BootswatchSelect(
   };
   // Remove our own props
   const propKeys = [
-    'version',
-    'cdnLocation',
-    'themeFilename',
-    'selectedThemeName',
-    'selectorHidden',
-    'disableHeadLink',
+    "version",
+    "cdnLocation",
+    "themeFilename",
+    "selectedThemeName",
+    "selectorHidden",
+    "disableHeadLink",
   ];
   propKeys.forEach((propKey: string) => delete selectProps[propKey]);
 
   return (
     <>
       {!props.disableHeadLink && (
-        <Helmet>{selectedThemeName !== 'default' && <link rel="stylesheet" type="text/css" href={themeCss} />}</Helmet>
+        <Helmet>
+          {selectedThemeName !== "default" && (
+            <link rel="stylesheet" type="text/css" href={themeCss} />
+          )}
+        </Helmet>
       )}
       {!props.selectorHidden && (
         <select {...selectProps}>
@@ -130,7 +138,9 @@ export function BootswatchSelect(
           <option value="cyborg">Cyborg - Jet black and electric blue</option>
           <option value="darkly">Darkly - Flatly in night mode</option>
           <option value="flatly">Flatly - Flat and modern</option>
-          <option value="journal">Journal - Crisp like a new sheet of paper</option>
+          <option value="journal">
+            Journal - Crisp like a new sheet of paper
+          </option>
           <option value="litera">Litera - The medium is the message</option>
           <option value="lumen">Lumen - Light and shadow</option>
           <option value="lux">Lux - A touch of class</option>
@@ -139,7 +149,9 @@ export function BootswatchSelect(
           <option value="pulse">Pulse - A trace of purple</option>
           <option value="sandstone">Sandstone - A touch of warmth</option>
           <option value="simplex">Simplex - Mini and minimalist</option>
-          <option value="sketchy">Sketchy - A hand-drawn look for mockups and mirth</option>
+          <option value="sketchy">
+            Sketchy - A hand-drawn look for mockups and mirth
+          </option>
           <option value="slate">Slate - Shades of gunmetal gray</option>
           <option value="solar">Solar - A spin on Solarized</option>
           <option value="spacelab">Spacelab - Silvery and sleek</option>
@@ -153,9 +165,9 @@ export function BootswatchSelect(
 }
 
 BootswatchSelect.defaultProps = {
-  version: '4.4.1',
-  cdnLocation: 'https://stackpath.bootstrapcdn.com/bootswatch/',
-  themeFilename: 'bootstrap.min.css',
-  selectedThemeName: 'default',
+  version: "4.4.1",
+  cdnLocation: "https://stackpath.bootstrapcdn.com/bootswatch/",
+  themeFilename: "bootstrap.min.css",
+  selectedThemeName: "default",
   selectorHidden: false,
 };

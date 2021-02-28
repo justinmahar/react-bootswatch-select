@@ -1,14 +1,14 @@
-import React from 'react';
-import { Bootstrap } from '../components/Bootstrap';
-import { BootswatchSelect } from '../components/BootswatchSelect';
-import { FontAwesome } from '../components/FontAwesome';
+import React from "react";
+import { Bootstrap } from "../components/Bootstrap";
+import { BootswatchSelect } from "../components/BootswatchSelect";
+import { FontAwesome } from "../components/FontAwesome";
 
 // A Storybook is a collection of stories. Each story represents a single visual state of a component.
 // Technically, a story is a function that returns something that can be rendered to screen.
 
 // The default export defines metadata that applies to the group.
 export default {
-  title: 'BootswatchSelect',
+  title: "BootswatchSelect",
   component: BootswatchSelect,
 };
 
@@ -54,14 +54,18 @@ const componentsDemo = (
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2" type="text" placeholder="Search" />
+          <input
+            className="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+          />
           <button className="btn btn-secondary my-2 my-sm-0" type="submit">
             Search
           </button>
         </form>
       </div>
     </nav>
-    <div style={{ margin: '20px' }}>
+    <div style={{ margin: "20px" }}>
       <button type="button" className="btn btn-primary">
         Primary
       </button>
@@ -95,7 +99,9 @@ const componentsDemo = (
         Heading
         <small className="text-muted">with muted text</small>
       </h3>
-      <p className="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      <p className="lead">
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+      </p>
       <br />
       <ul className="nav nav-pills">
         <li className="nav-item">
@@ -147,36 +153,43 @@ const componentsDemo = (
 
 // The named exports define the stories
 export const SelectorVisibleStory = () => {
-  const [selectedThemeName, setSelectedThemeName] = React.useState('default');
+  const [selectedThemeName, setSelectedThemeName] = React.useState("default");
   return (
     <>
       <Bootstrap />
       <FontAwesome />
-      <div style={{ margin: '20px' }} className="form-group">
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ margin: "20px" }} className="form-group">
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <h2>React Bootswatch Select Demo</h2>
           <div>
-            <a className="btn btn-secondary btn-sm" href="https://devboldly.github.io/react-bootswatch-select/">
+            <a
+              className="btn btn-secondary btn-sm"
+              href="https://justinmahar.github.io/react-bootswatch-select/"
+            >
               Project Home
             </a>
           </div>
         </div>
         <h3>
-          <i className="fa fa-paint-brush" aria-hidden="true" style={{ marginRight: '10px' }} />
+          <i
+            className="fa fa-paint-brush"
+            aria-hidden="true"
+            style={{ marginRight: "10px" }}
+          />
           Select a theme:
         </h3>
         <BootswatchSelect
-          version={'4.4.1'}
+          version={"4.4.1"}
           className="form-control"
           selectedThemeName={selectedThemeName}
-          onChange={e => setSelectedThemeName(e.target.value)}
+          onChange={(e) => setSelectedThemeName(e.target.value)}
         />
         <br />
         <h4>
           Selected theme: <code>{selectedThemeName}</code>
         </h4>
       </div>
-      <p style={{ marginLeft: '20px' }}>
+      <p style={{ marginLeft: "20px" }}>
         One line of code (Bootstrap must be imported already):
         <br />
         <code>{`<BootswatchSelect version={'4.4.1'} className="form-control" />`}</code>
@@ -187,29 +200,36 @@ export const SelectorVisibleStory = () => {
   );
 };
 SelectorVisibleStory.story = {
-  name: 'Selector Visible',
+  name: "Selector Visible",
 };
 
 export const SelectorHiddenStory = () => (
   <>
     <Bootstrap />
     <FontAwesome />
-    <div style={{ margin: '20px' }} className="form-group">
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div style={{ margin: "20px" }} className="form-group">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h2>React Bootswatch Select Demo</h2>
         <div>
-          <a className="btn btn-secondary btn-sm" href="https://devboldly.github.io/react-bootswatch-select/">
+          <a
+            className="btn btn-secondary btn-sm"
+            href="https://justinmahar.github.io/react-bootswatch-select/"
+          >
             Project Home
           </a>
         </div>
       </div>
       <h3>
-        <i className="fa fa-eye-slash" style={{ marginRight: '10px' }} />
+        <i className="fa fa-eye-slash" style={{ marginRight: "10px" }} />
         Selector is hidden with <code>cerulean</code> selected
       </h3>
-      <BootswatchSelect version={'4.4.1'} selectedThemeName="cerulean" selectorHidden />
+      <BootswatchSelect
+        version={"4.4.1"}
+        selectedThemeName="cerulean"
+        selectorHidden
+      />
     </div>
-    <p style={{ marginLeft: '20px' }}>
+    <p style={{ marginLeft: "20px" }}>
       One line of code (Bootstrap must be imported already):
       <br />
       <code>{`<BootswatchSelect version={'4.4.1'} selectedThemeName="cerulean" selectorHidden />`}</code>
@@ -219,33 +239,36 @@ export const SelectorHiddenStory = () => (
   </>
 );
 SelectorHiddenStory.story = {
-  name: 'Selector Hidden',
+  name: "Selector Hidden",
 };
 
 export const SelectorOnlyStory = () => (
   <>
     <Bootstrap />
     <FontAwesome />
-    <div style={{ margin: '20px' }} className="form-group">
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div style={{ margin: "20px" }} className="form-group">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h2>React Bootswatch Select Demo</h2>
         <div>
-          <a className="btn btn-secondary btn-sm" href="https://devboldly.github.io/react-bootswatch-select/">
+          <a
+            className="btn btn-secondary btn-sm"
+            href="https://justinmahar.github.io/react-bootswatch-select/"
+          >
             Project Home
           </a>
         </div>
       </div>
       <h3>
-        <i className="fa fa-clipboard" style={{ marginRight: '10px' }} />
+        <i className="fa fa-clipboard" style={{ marginRight: "10px" }} />
         Selector is in display-only mode. Becomes a plain old select.
       </h3>
       <BootswatchSelect className="form-control" disableHeadLink />
     </div>
-    <p style={{ marginLeft: '20px' }}>
+    <p style={{ marginLeft: "20px" }}>
       <code>{`<BootswatchSelect className="form-control" disableHeadLink />`}</code>
     </p>
   </>
 );
 SelectorOnlyStory.story = {
-  name: 'Display-Only',
+  name: "Display-Only",
 };

@@ -8,7 +8,7 @@ export interface BootstrapProps {
     filename?: string;
 }
 /**
- * See documentation: [Bootstrap](https://devboldly.github.io/react-bootswatch-select/Bootstrap)
+ * See documentation: [Bootstrap](https://justinmahar.github.io/react-bootswatch-select/Bootstrap)
  *
  * Quickly add Bootstrap stylesheets to the `<head/>` element of the page.
  *

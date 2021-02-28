@@ -1,5 +1,5 @@
 <h2 align="center">
-  <a href="https://github.com/devboldly/react-bootswatch-select">React Bootswatch Select</a>
+  <a href="https://github.com/justinmahar/react-bootswatch-select">React Bootswatch Select</a>
 </h2>
 <h3 align="center">
   Bootswatch theme selector component for React.<br/>Try Bootswatch themes on your Bootstrap site with one line!
@@ -8,21 +8,21 @@
   <a href="https://badge.fury.io/js/react-bootswatch-select">
     <img src="https://badge.fury.io/js/react-bootswatch-select.svg" alt="npm Version"/>
   </a>
-  <a href="https://github.com/devboldly/react-bootswatch-select/actions?query=workflow%3ATests">
-    <img src="https://github.com/devboldly/react-bootswatch-select/workflows/Tests/badge.svg" alt="Tests Status"/>
+  <a href="https://github.com/justinmahar/react-bootswatch-select/actions?query=workflow%3ATests">
+    <img src="https://github.com/justinmahar/react-bootswatch-select/workflows/Tests/badge.svg" alt="Tests Status"/>
   </a>
-  <a href="https://github.com/devboldly/react-bootswatch-select/actions?query=workflow%3ADeploy">
-    <img src="https://github.com/devboldly/react-bootswatch-select/workflows/Deploy/badge.svg" alt="Deploy Status"/>
+  <a href="https://github.com/justinmahar/react-bootswatch-select/actions?query=workflow%3ADeploy">
+    <img src="https://github.com/justinmahar/react-bootswatch-select/workflows/Deploy/badge.svg" alt="Deploy Status"/>
   </a>
 </p>
 
 ## Documentation
 
-Read the **[official documentation](https://devboldly.github.io/react-bootswatch-select/)**.
+Read the **[official documentation](https://justinmahar.github.io/react-bootswatch-select/)**.
 
-<a href="https://devboldly.github.io/react-bootswatch-select-demo/" target="_blank" rel="noopener noreferrer"><img src="./src/__docz__/images/demo.gif" /></a>
+<a href="https://justinmahar.github.io/react-bootswatch-select-demo/" target="_blank" rel="noopener noreferrer"><img src="./src/__docz__/images/demo.gif" /></a>
 
-👁️ **[Live Demo](https://devboldly.github.io/react-bootswatch-select-demo/)**
+👁️ **[Live Demo](https://justinmahar.github.io/react-bootswatch-select-demo/)**
 
 ## Overview
 
@@ -30,9 +30,9 @@ Drop a [Bootswatch](https://bootswatch.com/) theme selector onto your React site
 
 This package includes three components:
 
-- [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect) - A Bootswatch theme selector that supports three modes: visible, hidden, and display-only.
-- [Bootstrap](https://devboldly.github.io/react-bootswatch-select/Bootstrap) - A component for easily adding Bootstrap to your site, for convenience.
-- [FontAwesome](https://devboldly.github.io/react-bootswatch-select/FontAwesome) - A component for easily adding Font Awesome to your site, for convenience.
+- [BootswatchSelect](https://justinmahar.github.io/react-bootswatch-select/BootswatchSelect) - A Bootswatch theme selector that supports three modes: visible, hidden, and display-only.
+- [Bootstrap](https://justinmahar.github.io/react-bootswatch-select/Bootstrap) - A component for easily adding Bootstrap to your site, for convenience.
+- [FontAwesome](https://justinmahar.github.io/react-bootswatch-select/FontAwesome) - A component for easily adding Font Awesome to your site, for convenience.
 
 By default, all CSS is loaded from [bootstrapcdn.com](https://www.bootstrapcdn.com/).
 
@@ -44,7 +44,7 @@ By default, all CSS is loaded from [bootstrapcdn.com](https://www.bootstrapcdn.c
   - Quickly swatch out your next big project so you can focus on the stuff that matters.
 - **🎛️ Visible, hidden, and display-only modes**
   - Several modes for the level of integration that suits you.
-- **🎁 Quickly drop in [Bootstrap](https://devboldly.github.io/react-bootswatch-select/Bootstrap) and [Font Awesome](https://devboldly.github.io/react-bootswatch-select/FontAwesome)**
+- **🎁 Quickly drop in [Bootstrap](https://justinmahar.github.io/react-bootswatch-select/Bootstrap) and [Font Awesome](https://justinmahar.github.io/react-bootswatch-select/FontAwesome)**
   - For convenience, Bootstrap and Font Awesome CDN components are included to get you up and running fast.
 
 ## Installation
@@ -89,7 +89,7 @@ This will render the `select` only and will not dynamically add the selected the
 
 ### Bootstrap + Bootswatch
 
-If you'd like to load Bootstrap (or Font Awesome) from the CDN before the [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect) is used:
+If you'd like to load Bootstrap (or Font Awesome) from the CDN before the [BootswatchSelect](https://justinmahar.github.io/react-bootswatch-select/BootswatchSelect) is used:
 
 ```jsx
 import { Bootstrap, FontAwesome, BootswatchSelect } from 'react-bootswatch-select';
@@ -101,7 +101,7 @@ import { Bootstrap, FontAwesome, BootswatchSelect } from 'react-bootswatch-selec
 
 All CSS is loaded from [bootstrapcdn.com](https://www.bootstrapcdn.com/) by default. Check there for the latest version.
 
-Font Awesome is not required for [BootswatchSelect](https://devboldly.github.io/react-bootswatch-select/BootswatchSelect), but is included here in case you want it.
+Font Awesome is not required for [BootswatchSelect](https://justinmahar.github.io/react-bootswatch-select/BootswatchSelect), but is included here in case you want it.
 
 ## TypeScript
 
@@ -121,14 +121,14 @@ For major changes, open an issue first to discuss what you'd like to change.
 
 See [Kindling](https://tinyurl.com/kindlingscripts) for npm script documentation.
 
-## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-bootswatch-select/stargazers)
+## ⭐ Found It Helpful? [Star It!](https://github.com/justinmahar/react-bootswatch-select/stargazers)
 
-If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-bootswatch-select/stargazers): [👉⭐](https://github.com/devboldly/react-bootswatch-select/stargazers)
+If you found this project helpful, let the community know by giving it a [star](https://github.com/justinmahar/react-bootswatch-select/stargazers): [👉⭐](https://github.com/justinmahar/react-bootswatch-select/stargazers)
 
 ## MIT License
 
 ```
-Copyright © 2020 DevBoldly https://devboldly.com
+Copyright © 2020 Justin Mahar https://github.com/justinmahar
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
